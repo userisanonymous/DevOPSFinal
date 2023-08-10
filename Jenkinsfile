@@ -17,7 +17,7 @@ pipeline {
                 script {
                     def dockerImage = docker.build("devopsfinal_image:${env.BUILD_ID}", "-f Dockerfile .")
                     // Save the dockerImage variable as an environment variable for later use
-                    env.IMAGE_NAME = "my_web_app_image:${env.BUILD_ID}"
+                    env.IMAGE_NAME = "devopsfinal_image:${env.BUILD_ID}"
                 }
             }
         }
